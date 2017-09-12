@@ -1,0 +1,6753 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column city_clean at index 9 based on column city using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "city_clean",
+    "columnInsertIndex": 9,
+    "baseColumnName": "city",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.toUppercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST. LOUIS",
+          "ST LOUIS"
+        ],
+        "to": "ST. LOUIS"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LAND O LAKES",
+          "LAND O' LAKES"
+        ],
+        "to": "LAND O LAKES"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WHEELING",
+          "WHEELING,"
+        ],
+        "to": "WHEELING"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WASHINGTON, DC",
+          "WASHINGTON DC"
+        ],
+        "to": "WASHINGTON, DC"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "INDIANAPOLIS",
+          "INDIANAPOLIS,"
+        ],
+        "to": "INDIANAPOLIS"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "GREENWOOD",
+          "GREENWOOD GREENWOOD"
+        ],
+        "to": "GREENWOOD"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "HONOKA'A",
+          "HONOKAA"
+        ],
+        "to": "HONOKA'A"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MT AIRY",
+          "MT. AIRY"
+        ],
+        "to": "MT AIRY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FOREST PARK",
+          "PARK FOREST"
+        ],
+        "to": "FOREST PARK"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST JOHNSBURY",
+          "ST. JOHNSBURY"
+        ],
+        "to": "ST JOHNSBURY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST ANTHONY",
+          "ST. ANTHONY"
+        ],
+        "to": "ST ANTHONY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WAYNE",
+          "WAYNE,"
+        ],
+        "to": "WAYNE"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LE ROY",
+          "LEROY"
+        ],
+        "to": "LE ROY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NORTHPORT",
+          "NORTH PORT"
+        ],
+        "to": "NORTHPORT"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA CROSSE",
+          "LACROSSE"
+        ],
+        "to": "LA CROSSE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CHARLESTOWN",
+          "CHARLES TOWN"
+        ],
+        "to": "CHARLESTOWN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA GRANGE",
+          "LAGRANGE"
+        ],
+        "to": "LA GRANGE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "KAILUA-KONA",
+          "KAILUA KONA"
+        ],
+        "to": "KAILUA-KONA"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NEW MARKET",
+          "NEWMARKET"
+        ],
+        "to": "NEW MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DELMAR",
+          "DEL MAR"
+        ],
+        "to": "DELMAR"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "EAST HAMPTON",
+          "EASTHAMPTON"
+        ],
+        "to": "EAST HAMPTON"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CLEAR LAKE",
+          "CLEARLAKE"
+        ],
+        "to": "CLEAR LAKE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA SALLE",
+          "LASALLE"
+        ],
+        "to": "LA SALLE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "OAK RIDGE",
+          "OAKRIDGE"
+        ],
+        "to": "OAK RIDGE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FAIRHAVEN",
+          "FAIR HAVEN"
+        ],
+        "to": "FAIRHAVEN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WINSTON-SALEM",
+          "WINSTON SALEM"
+        ],
+        "to": "WINSTON-SALEM"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DE SOTO",
+          "DESOTO"
+        ],
+        "to": "DE SOTO"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WHITE HOUSE",
+          "WHITEHOUSE"
+        ],
+        "to": "WHITE HOUSE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NEW CASTLE",
+          "NEWCASTLE"
+        ],
+        "to": "NEW CASTLE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WEST CHESTER",
+          "WESTCHESTER"
+        ],
+        "to": "WEST CHESTER"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA PLATA",
+          "LAPLATA"
+        ],
+        "to": "LA PLATA"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column county_clean at index 11 based on column County using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "county_clean",
+    "columnInsertIndex": 11,
+    "baseColumnName": "County",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column county_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "county_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DeKalb",
+          "Dekalb",
+          "DEKALB"
+        ],
+        "to": "DeKalb"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Santa Barbara",
+          "SANTA BARBARA"
+        ],
+        "to": "Santa Barbara"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Washington",
+          "WASHINGTON"
+        ],
+        "to": "Washington"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mobile",
+          "MOBILE"
+        ],
+        "to": "Mobile"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fresno",
+          "FRESNO"
+        ],
+        "to": "Fresno"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Los Angeles",
+          "LOS ANGELES"
+        ],
+        "to": "Los Angeles"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Humboldt",
+          "HUMBOLDT"
+        ],
+        "to": "Humboldt"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lee",
+          "LEE"
+        ],
+        "to": "Lee"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Butler",
+          "BUTLER"
+        ],
+        "to": "Butler"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Midland",
+          "midland"
+        ],
+        "to": "Midland"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Alameda",
+          "ALAMEDA"
+        ],
+        "to": "Alameda"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Shasta",
+          "SHASTA"
+        ],
+        "to": "Shasta"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St. Louis City",
+          "St. Louis city"
+        ],
+        "to": "St. Louis City"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jefferson",
+          "JEFFERSON"
+        ],
+        "to": "Jefferson"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Henry",
+          "HENRY"
+        ],
+        "to": "Henry"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Kern",
+          "KERN"
+        ],
+        "to": "Kern"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Butte",
+          "BUTTE"
+        ],
+        "to": "Butte"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Shelby",
+          "SHELBY"
+        ],
+        "to": "Shelby"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Tuolumne",
+          "TUOLUMNE"
+        ],
+        "to": "Tuolumne"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Orange",
+          "ORANGE"
+        ],
+        "to": "Orange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sonoma",
+          "SONOMA"
+        ],
+        "to": "Sonoma"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ELMORE",
+          "Elmore"
+        ],
+        "to": "Elmore"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wilcox",
+          "WILCOX"
+        ],
+        "to": "Wilcox"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LaGrange",
+          "Lagrange"
+        ],
+        "to": "LaGrange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "San Luis Obispo",
+          "SAN LUIS OBISPO"
+        ],
+        "to": "San Luis Obispo"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Inyo",
+          "INYO"
+        ],
+        "to": "Inyo"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "El Paso",
+          "EL Paso"
+        ],
+        "to": "El Paso"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Monroe",
+          "MONROE"
+        ],
+        "to": "Monroe"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column zip_clean at index 14 based on column zip using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "zip_clean",
+    "columnInsertIndex": 14,
+    "baseColumnName": "zip",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "0033"
+        ],
+        "to": "05033"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "2804"
+        ],
+        "to": "28504"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "513338"
+        ],
+        "to": "51338"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "550424"
+        ],
+        "to": "50424"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "6105"
+        ],
+        "to": "06105"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "6106"
+        ],
+        "to": "06106"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "6412"
+        ],
+        "to": "06412"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "8167"
+        ],
+        "to": "81657"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FL"
+        ],
+        "to": "32041"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "32041"
+        ],
+        "to": "32401"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "IL"
+        ],
+        "to": "61820"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "KS"
+        ],
+        "to": "67460"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ks"
+        ],
+        "to": "67107"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MA"
+        ],
+        "to": "01516"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "n/a"
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NY"
+        ],
+        "to": "12054"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "OR"
+        ],
+        "to": "97031"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column zip_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "TN"
+        ],
+        "to": "37206"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column zip_clean using expression jython:return value[0:5]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "zip_clean",
+    "expression": "jython:return value[0:5]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Facebook_clean at index 4 based on column Facebook using expression jython:return value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Facebook_clean",
+    "columnInsertIndex": 4,
+    "baseColumnName": "Facebook",
+    "expression": "jython:return value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Facebook_clean using expression jython:if u'https://www.facebook.com/' not in value and u'http://www.facebook.com/' not in value:\n return u'https://www.facebook.com/'+value \nelse: return value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Facebook_clean",
+    "expression": "jython:if u'https://www.facebook.com/' not in value and u'http://www.facebook.com/' not in value:\n return u'https://www.facebook.com/'+value \nelse: return value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Facebook_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Facebook_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Waldo Farmer's Market https://www.facebook.com/pages/Waldo-Farmers-Market/120803314706798"
+        ],
+        "to": "https://www.facebook.com/pages/Waldo-Farmers-Market/120803314706798"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Twitter_clean at index 6 based on column Twitter using expression jython:return value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Twitter_clean",
+    "columnInsertIndex": 6,
+    "baseColumnName": "Twitter",
+    "expression": "jython:return value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Twitter_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Twitter_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "yes"
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Facebook_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Facebook_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/yes"
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Twitter_clean using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Twitter_clean",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Twitter_clean using expression jython:string = u'' \nif u'https://' not in value and u'http://' not in value and u'https:////' not in value and u'http://www.' not in value: \n  string += u'https://' \nif u'twitter.com/' not in value:\n string += u'twitter.com/' \nif value: return string + value.split(u'@')[-1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Twitter_clean",
+    "expression": "jython:string = u'' \nif u'https://' not in value and u'http://' not in value and u'https:////' not in value and u'http://www.' not in value: \n  string += u'https://' \nif u'twitter.com/' not in value:\n string += u'twitter.com/' \nif value: return string + value.split(u'@')[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.toUppercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_clean using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST. LOUIS",
+          "ST LOUIS"
+        ],
+        "to": "ST. LOUIS"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LAND O LAKES",
+          "LAND O' LAKES"
+        ],
+        "to": "LAND O LAKES"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WHEELING",
+          "WHEELING,"
+        ],
+        "to": "WHEELING"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WASHINGTON, DC",
+          "WASHINGTON DC"
+        ],
+        "to": "WASHINGTON, DC"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "INDIANAPOLIS",
+          "INDIANAPOLIS,"
+        ],
+        "to": "INDIANAPOLIS"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "GREENWOOD",
+          "GREENWOOD GREENWOOD"
+        ],
+        "to": "GREENWOOD"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "HONOKA'A",
+          "HONOKAA"
+        ],
+        "to": "HONOKA'A"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MT AIRY",
+          "MT. AIRY"
+        ],
+        "to": "MT AIRY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FOREST PARK",
+          "PARK FOREST"
+        ],
+        "to": "FOREST PARK"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST JOHNSBURY",
+          "ST. JOHNSBURY"
+        ],
+        "to": "ST JOHNSBURY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ST ANTHONY",
+          "ST. ANTHONY"
+        ],
+        "to": "ST ANTHONY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WAYNE",
+          "WAYNE,"
+        ],
+        "to": "WAYNE"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "city_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LE ROY",
+          "LEROY"
+        ],
+        "to": "LE ROY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NORTHPORT",
+          "NORTH PORT"
+        ],
+        "to": "NORTHPORT"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA CROSSE",
+          "LACROSSE"
+        ],
+        "to": "LA CROSSE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CHARLESTOWN",
+          "CHARLES TOWN"
+        ],
+        "to": "CHARLESTOWN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA GRANGE",
+          "LAGRANGE"
+        ],
+        "to": "LA GRANGE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "KAILUA-KONA",
+          "KAILUA KONA"
+        ],
+        "to": "KAILUA-KONA"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NEW MARKET",
+          "NEWMARKET"
+        ],
+        "to": "NEW MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DELMAR",
+          "DEL MAR"
+        ],
+        "to": "DELMAR"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "EAST HAMPTON",
+          "EASTHAMPTON"
+        ],
+        "to": "EAST HAMPTON"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CLEAR LAKE",
+          "CLEARLAKE"
+        ],
+        "to": "CLEAR LAKE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA SALLE",
+          "LASALLE"
+        ],
+        "to": "LA SALLE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "OAK RIDGE",
+          "OAKRIDGE"
+        ],
+        "to": "OAK RIDGE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FAIRHAVEN",
+          "FAIR HAVEN"
+        ],
+        "to": "FAIRHAVEN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WINSTON-SALEM",
+          "WINSTON SALEM"
+        ],
+        "to": "WINSTON-SALEM"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DE SOTO",
+          "DESOTO"
+        ],
+        "to": "DE SOTO"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WHITE HOUSE",
+          "WHITEHOUSE"
+        ],
+        "to": "WHITE HOUSE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "NEW CASTLE",
+          "NEWCASTLE"
+        ],
+        "to": "NEW CASTLE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WEST CHESTER",
+          "WESTCHESTER"
+        ],
+        "to": "WEST CHESTER"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LA PLATA",
+          "LAPLATA"
+        ],
+        "to": "LA PLATA"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column county_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "county_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DeKalb",
+          "Dekalb",
+          "DEKALB"
+        ],
+        "to": "DeKalb"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Santa Barbara",
+          "SANTA BARBARA"
+        ],
+        "to": "Santa Barbara"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Washington",
+          "WASHINGTON"
+        ],
+        "to": "Washington"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mobile",
+          "MOBILE"
+        ],
+        "to": "Mobile"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fresno",
+          "FRESNO"
+        ],
+        "to": "Fresno"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Los Angeles",
+          "LOS ANGELES"
+        ],
+        "to": "Los Angeles"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Humboldt",
+          "HUMBOLDT"
+        ],
+        "to": "Humboldt"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lee",
+          "LEE"
+        ],
+        "to": "Lee"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Butler",
+          "BUTLER"
+        ],
+        "to": "Butler"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Midland",
+          "midland"
+        ],
+        "to": "Midland"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Alameda",
+          "ALAMEDA"
+        ],
+        "to": "Alameda"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Shasta",
+          "SHASTA"
+        ],
+        "to": "Shasta"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St. Louis City",
+          "St. Louis city"
+        ],
+        "to": "St. Louis City"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jefferson",
+          "JEFFERSON"
+        ],
+        "to": "Jefferson"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Henry",
+          "HENRY"
+        ],
+        "to": "Henry"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Kern",
+          "KERN"
+        ],
+        "to": "Kern"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Butte",
+          "BUTTE"
+        ],
+        "to": "Butte"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Shelby",
+          "SHELBY"
+        ],
+        "to": "Shelby"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Tuolumne",
+          "TUOLUMNE"
+        ],
+        "to": "Tuolumne"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Orange",
+          "ORANGE"
+        ],
+        "to": "Orange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sonoma",
+          "SONOMA"
+        ],
+        "to": "Sonoma"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ELMORE",
+          "Elmore"
+        ],
+        "to": "Elmore"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wilcox",
+          "WILCOX"
+        ],
+        "to": "Wilcox"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LaGrange",
+          "Lagrange"
+        ],
+        "to": "LaGrange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "San Luis Obispo",
+          "SAN LUIS OBISPO"
+        ],
+        "to": "San Luis Obispo"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Inyo",
+          "INYO"
+        ],
+        "to": "Inyo"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "El Paso",
+          "EL Paso"
+        ],
+        "to": "El Paso"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Monroe",
+          "MONROE"
+        ],
+        "to": "Monroe"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Datecopy at index 15 based on column Season1Date using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Datecopy",
+    "columnInsertIndex": 15,
+    "baseColumnName": "Season1Date",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy using expression grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy",
+    "expression": "grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Season1Datecopy by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "to ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jan 12, 2012 "
+        ],
+        "to": "01/12/2012 "
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Start Date 1/1/13 "
+        ],
+        "to": "1/1/13 "
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 1 using expression value.toString()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 1 using expression grel:value.replace(\", \",\"/\").replace(\" \",\"/\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "grel:value.replace(\", \",\"/\").replace(\" \",\"/\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "End Date 12/31/13"
+        ],
+        "to": "12/31/13"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oct 30, 2012"
+        ],
+        "to": "08 30, 2012"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oct 6, 2012"
+        ],
+        "to": "08 6, 2012"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oct. 13, 2011"
+        ],
+        "to": "08 13, 2011"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Octobsr"
+        ],
+        "to": "08"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sept 12, 2012"
+        ],
+        "to": "09 12, 2012"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sept 24, 2011"
+        ],
+        "to": "09 24, 2011"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sept. 8"
+        ],
+        "to": "09 8, 2016"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 2 using expression value.toString()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 2 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 2 using expression grel:value.replace(', ','/').replace(' ','/')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "grel:value.replace(', ','/').replace(' ','/')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column updateyear at index 63 based on column updateTime using expression jython:return value.split()[0].split('/')[-1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "updateyear",
+    "columnInsertIndex": 63,
+    "baseColumnName": "updateTime",
+    "expression": "jython:return value.split()[0].split('/')[-1]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 1 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 2 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season1Datecopy 1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "06/23"
+        ],
+        "to": "06/23/2016"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 1 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 1",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Datecopy 2 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Datecopy 2",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season1Datecopy 1 to Season1StartDate",
+    "oldColumnName": "Season1Datecopy 1",
+    "newColumnName": "Season1StartDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season1Datecopy 2 to Season1EndDate",
+    "oldColumnName": "Season1Datecopy 2",
+    "newColumnName": "Season1EndDate"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column x using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "x",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column y using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column updateTime using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "updateTime",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2DateCopy at index 19 based on column Season2Date using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2DateCopy",
+    "columnInsertIndex": 19,
+    "baseColumnName": "Season2Date",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2DateCopy using expression grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy",
+    "expression": "grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Season2DateCopy by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "to ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2DateCopy 1 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 1",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season2DateCopy 1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Aug 23, 2012 "
+        ],
+        "to": "08/23/2012 "
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2DateCopy 1 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 1",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2DateCopy 2 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 2",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Season2DateCopy 2",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Nov 1, 2012"
+        ],
+        "to": "11/1/2012"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2DateCopy 2 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2DateCopy 2",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3DateCopy at index 23 based on column Season3Date using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3DateCopy",
+    "columnInsertIndex": 23,
+    "baseColumnName": "Season3Date",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3DateCopy using expression grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3DateCopy",
+    "expression": "grel:value.replace('January', '01').replace('February', '02').replace('March', '03').replace('April', '04').replace('May', '05').replace('June', '06').replace('July', '07').replace('August', '08').replace('September', '09').replace('October', '10').replace('November', '11').replace('December', '12')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Season3DateCopy by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3DateCopy",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "to ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3DateCopy 1 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3DateCopy 1",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3DateCopy 1 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3DateCopy 1",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3DateCopy 2 using expression grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3DateCopy 2",
+    "expression": "grel:value.replace(/^[0-9]{1,2}$/,value+\"/01/\"+cells['updateyear'].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Copy at index 27 based on column Season4Date using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Copy",
+    "columnInsertIndex": 27,
+    "baseColumnName": "Season4Date",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Season4Copy by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Copy",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "to ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Copy 1 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Copy 1",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Copy 2 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Copy 2",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Copy 2 using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Copy 2",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season2DateCopy 1 to Season2StartDate",
+    "oldColumnName": "Season2DateCopy 1",
+    "newColumnName": "Season2StartDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season2DateCopy 2 to Season2EndDate",
+    "oldColumnName": "Season2DateCopy 2",
+    "newColumnName": "Season2EndDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season3DateCopy 1 to Season3StartDate",
+    "oldColumnName": "Season3DateCopy 1",
+    "newColumnName": "Season3StartDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season3DateCopy 2 to Season3EndDate",
+    "oldColumnName": "Season3DateCopy 2",
+    "newColumnName": "Season3EndDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season4Copy 1 to Season4StartDate",
+    "oldColumnName": "Season4Copy 1",
+    "newColumnName": "Season4StartDate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Season4Copy 2 to Season4EndDate",
+    "oldColumnName": "Season4Copy 2",
+    "newColumnName": "Season4EndDate"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Monday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Monday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Tuesday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Tuesday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Wednesdays at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Wednesdays",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Thursday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Thursday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Friday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Friday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Saturday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Saturday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season1Sunday at index 18 based on column Season1Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season1Sunday",
+    "columnInsertIndex": 18,
+    "baseColumnName": "Season1Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Monday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Monday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Tuesday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Tuesday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Wednesdays at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Wednesdays",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Thursday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Thursday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Friday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Friday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Saturday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Saturday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season2Sunday at index 29 based on column Season2Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season2Sunday",
+    "columnInsertIndex": 29,
+    "baseColumnName": "Season2Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Monday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Monday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Tuesday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Tuesday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Wednesdays at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Wednesdays",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Thursday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Thursday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Friday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Friday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Saturday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Saturday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season3Sunday at index 40 based on column Season3Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season3Sunday",
+    "columnInsertIndex": 40,
+    "baseColumnName": "Season3Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Monday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Monday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!='']\ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array]\nreturn dict(tuple)[u'Mon']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Tuesday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Tuesday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Tue']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Wednesdays at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Wednesdays",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Wed']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Thursday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Thursday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Thu']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Friday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Friday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Fri']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Saturday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Saturday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sat']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Season4Sunday at index 51 based on column Season4Time using expression jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Season4Sunday",
+    "columnInsertIndex": 51,
+    "baseColumnName": "Season4Time",
+    "expression": "jython:array = [i for i in value.split(';') if i!=''] \ntuple = [(i.split(':')[0],':'.join(i.split(':')[1:])) for i in array] \nreturn dict(tuple)[u'Sun']",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Organic_clean at index 70 based on column Organic using expression jython:if value ==\"-\":\n return \nelse:\n return value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Organic_clean",
+    "columnInsertIndex": 70,
+    "baseColumnName": "Organic",
+    "expression": "jython:if value ==\"-\":\n return \nelse:\n return value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Twitter_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Twitter_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://twitter.com/pkskllfarmmkt",
+          "https://twitter.com/pkskllfarmmkt "
+        ],
+        "to": "https://twitter.com/pkskllfarmmkt"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://twitter.com/n/a",
+          "https://twitter.com/na"
+        ],
+        "to": ""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://twitter.com/athfarmersmkt",
+          "https://twitter.com/athfarmersmkt "
+        ],
+        "to": "https://twitter.com/athfarmersmkt"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Facebook_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Facebook_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/TazewellFarmersMarket",
+          "https://www.facebook.com/tazewellfarmersmarket"
+        ],
+        "to": "https://www.facebook.com/TazewellFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/Princeton-Zimmerman Farmers' Market ",
+          "https://www.facebook.com/Princeton-zimmerman farmers market"
+        ],
+        "to": "https://www.facebook.com/Princeton-Zimmerman Farmers' Market "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/#!/pages/Farmville-Farmers-Market/205992309453843",
+          "https://www.facebook.com/pages/Farmville-Farmers-Market/205992309453843"
+        ],
+        "to": "https://www.facebook.com/#!/pages/Farmville-Farmers-Market/205992309453843"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/YellvilleFarmersMarket",
+          "https://www.facebook.com/YellvilleFarmersMarket/"
+        ],
+        "to": "https://www.facebook.com/YellvilleFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com///www.facebook.com/ShirleysFarmersMarketsNV",
+          "https://www.facebook.com/www.facebook.com/ShirleysFarmersMarketsNV"
+        ],
+        "to": "https://www.facebook.com///www.facebook.com/ShirleysFarmersMarketsNV"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/FarmToCity",
+          "https://www.facebook.com/FarmToCity/"
+        ],
+        "to": "https://www.facebook.com/FarmToCity"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/PvilleFarmMarket/",
+          "https://www.facebook.com/pvillefarmmarket"
+        ],
+        "to": "https://www.facebook.com/PvilleFarmMarket/"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Facebook_clean",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Facebook_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/portlandfarmersmarket/",
+          "https://www.facebook.com/portlandfarmersmarket"
+        ],
+        "to": "https://www.facebook.com/portlandfarmersmarket/"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/#!/stcharlesmd",
+          "https://www.facebook.com/stcharlesmd"
+        ],
+        "to": "https://www.facebook.com/stcharlesmd"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/bronxgreenmarkets",
+          "https://www.facebook.com/BronxGreenmarkets"
+        ],
+        "to": "https://www.facebook.com/bronxgreenmarkets"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/MeetingStreetMarket",
+          "https://www.facebook.com/meetingstreetmarket"
+        ],
+        "to": "https://www.facebook.com/MeetingStreetMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/twincityfarmersmarket",
+          "https://www.facebook.com/twincityfarmersmarket/"
+        ],
+        "to": "https://www.facebook.com/twincityfarmersmarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/Franklin Farmers Market",
+          "https://www.facebook.com/Franklin Farmer's Market"
+        ],
+        "to": "https://www.facebook.com/Franklin Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/JerichoFarmersMarket",
+          "https://www.facebook.com/JerichoFarmersMarket/"
+        ],
+        "to": "https://www.facebook.com/JerichoFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/foothillsfarmersmarket",
+          "https://www.facebook.com/foothillsfarmersmarket/"
+        ],
+        "to": "https://www.facebook.com/foothillsfarmersmarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/Marshall Area Farmers Market",
+          "https://www.facebook.com/Marshall Area Farmers Market "
+        ],
+        "to": "https://www.facebook.com/Marshall Area Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/MenomineeFarmersMarket",
+          "https://www.facebook.com/menomineefarmersmarket"
+        ],
+        "to": "https://www.facebook.com/MenomineeFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/www.Facebook.com/HeirloomFarmersMarkets",
+          "https://www.facebook.com/www.facebook.com/HeirloomFarmersMarkets"
+        ],
+        "to": "https://www.facebook.com/www.Facebook.com/HeirloomFarmersMarkets"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/morgan county farmers market",
+          "https://www.facebook.com/Morgan County Farmers Market"
+        ],
+        "to": "https://www.facebook.com/morgan county farmers market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/LafayetteFarmersMarket",
+          "https://www.facebook.com/LafayetteFarmersMarket/"
+        ],
+        "to": "https://www.facebook.com/LafayetteFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/EveryonesHarvest",
+          "https://www.facebook.com/EveryonesHarvest/"
+        ],
+        "to": "https://www.facebook.com/EveryonesHarvest"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/CrossroadsFarmersMarket",
+          "https://www.facebook.com/CrossroadsFarmersMarket/"
+        ],
+        "to": "https://www.facebook.com/CrossroadsFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/CoastalGrowers",
+          "https://www.facebook.com/CoastalGrowers/"
+        ],
+        "to": "https://www.facebook.com/CoastalGrowers"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/slcfarmersmarket",
+          "https://www.facebook.com/slcfarmersmarket "
+        ],
+        "to": "https://www.facebook.com/slcfarmersmarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/seafmfarmermarket",
+          "https://www.facebook.com/seafmfarmermarket/"
+        ],
+        "to": "https://www.facebook.com/seafmfarmermarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/OrangeCountyHomeGrown",
+          "https://www.facebook.com/OrangeCountyHomeGrown/"
+        ],
+        "to": "https://www.facebook.com/OrangeCountyHomeGrown"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/YouthBuildRFD",
+          "https://www.facebook.com/YouthBuildRfd"
+        ],
+        "to": "https://www.facebook.com/YouthBuildRFD"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/CorpusChristiDowntownFarmersMarket",
+          "https://www.facebook.com/CorpusChristiDowntownFarmersMarket/"
+        ],
+        "to": "https://www.facebook.com/CorpusChristiDowntownFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/woodstockmarketpdx",
+          "https://www.facebook.com/woodstockmarketpdx/"
+        ],
+        "to": "https://www.facebook.com/woodstockmarketpdx"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/Goshenfarmersmarket",
+          "https://www.facebook.com/goshenfarmersmarket"
+        ],
+        "to": "https://www.facebook.com/Goshenfarmersmarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/tempemarket",
+          "https://www.facebook.com/tempemarket/"
+        ],
+        "to": "https://www.facebook.com/tempemarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/#!/pages/WAIANAE-FARMERS-MARKET/234161083106",
+          "https://www.facebook.com/pages/WAIANAE-FARMERS-MARKET/234161083106"
+        ],
+        "to": "https://www.facebook.com/#!/pages/WAIANAE-FARMERS-MARKET/234161083106"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/InterlochenFarmersMarket",
+          "https://www.facebook.com/interlochenfarmersmarket"
+        ],
+        "to": "https://www.facebook.com/InterlochenFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/NPFarmersMarket",
+          "https://www.facebook.com/Npfarmersmarket"
+        ],
+        "to": "https://www.facebook.com/NPFarmersMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/none",
+          "https://www.facebook.com/None"
+        ],
+        "to": "https://www.facebook.com/none"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/ManhattanGreenmarkets",
+          "https://www.facebook.com/ManhattanGreenmarkets/"
+        ],
+        "to": "https://www.facebook.com/ManhattanGreenmarkets"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/MulberryStreetMarket",
+          "https://www.facebook.com/mulberrystreetmarket"
+        ],
+        "to": "https://www.facebook.com/MulberryStreetMarket"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "https://www.facebook.com/cityseed",
+          "https://www.facebook.com/cityseed/"
+        ],
+        "to": "https://www.facebook.com/cityseed"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Website",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Website",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.azfarmersmarkets.us",
+          "http://www.azFarmersMarkets.US",
+          "http://www.azfarmersmarkets.us "
+        ],
+        "to": "http://www.azfarmersmarkets.us"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://WTGPA.org",
+          "http://Wtgpa.org",
+          "http://wtgpa.org"
+        ],
+        "to": "http://WTGPA.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.texasfarmersmarket.org",
+          "http://www.TexasFarmersMarket.org"
+        ],
+        "to": "http://www.texasfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.RaleighEatLocal.com",
+          "http://www.raleigheatlocal.com"
+        ],
+        "to": "http://www.RaleighEatLocal.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.athensfarmersmarket.net/",
+          "http://www.athensfarmersmarket.net"
+        ],
+        "to": "http://www.athensfarmersmarket.net/"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://WWW.THEBOISEFARMERSMARKET.COM",
+          "http://www.theboisefarmersmarket.com"
+        ],
+        "to": "http://WWW.THEBOISEFARMERSMARKET.COM"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.ithacamarket.com",
+          "http://www.ithacamarket.com/"
+        ],
+        "to": "http://www.ithacamarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://peekskillfarmersmarket.com",
+          "http://peekskillfarmersmarket.com/"
+        ],
+        "to": "http://peekskillfarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.mountairymainstreet.org",
+          "http://www.mountairymainstreet.org/"
+        ],
+        "to": "http://www.mountairymainstreet.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.crescentcityfarmersmarket.org",
+          "http://www.crescentcityfarmersmarket.org/"
+        ],
+        "to": "http://www.crescentcityfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.northcountyfarmersmarkets.com/",
+          "http://www.northcountyfarmersmarkets.com"
+        ],
+        "to": "http://www.northcountyfarmersmarkets.com/"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.denverfarmersmarket.com",
+          "http://www.denverfarmersmarket.com/"
+        ],
+        "to": "http://www.denverfarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.battlecreekfarmersmarket.com",
+          "http://www.battlecreekfarmersmarket.com/"
+        ],
+        "to": "http://www.battlecreekfarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://SaugertiesFarmersMarket.com ",
+          "http://saugertiesfarmersmarket.com"
+        ],
+        "to": "http://SaugertiesFarmersMarket.com "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.plymouthfarmersmarket.org",
+          "http://www.plymouthfarmersmarket.org/"
+        ],
+        "to": "http://www.plymouthfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.california-grown.com",
+          "http://www.California-Grown.com"
+        ],
+        "to": "http://www.california-grown.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.bluegrassfarmersmarket.org",
+          "http://www.bluegrassfarmersmarket.org/"
+        ],
+        "to": "http://www.bluegrassfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.saugertiesfarmersmarket.com",
+          "http://www.saugertiesfarmersmarket.com/"
+        ],
+        "to": "http://www.saugertiesfarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://BuyLocalLee.com",
+          "http://buyLocalLee.com"
+        ],
+        "to": "http://BuyLocalLee.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.marketmonday.org",
+          "http://www.marketmonday.org/"
+        ],
+        "to": "http://www.marketmonday.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.ccdowntownfm.com",
+          "http://www.ccdowntownfm.com/"
+        ],
+        "to": "http://www.ccdowntownfm.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.localharvest.org",
+          "http://www.localharvest.org/"
+        ],
+        "to": "http://www.localharvest.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://pike.osu.edu",
+          "http://pike.osu.edu/"
+        ],
+        "to": "http://pike.osu.edu"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.puebloharp.com",
+          "http://www.puebloharp.com/#/"
+        ],
+        "to": "http://www.puebloharp.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.sunprairiefarmersmarket.com",
+          "http://www.sunprairiefarmersmarket.com/"
+        ],
+        "to": "http://www.sunprairiefarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.eatlocallongisland.com",
+          "http://www.eatlocallongisland.com/"
+        ],
+        "to": "http://www.eatlocallongisland.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.Parkrosefarmersmarket.org",
+          "http://www.parkrosefarmersmarket.org"
+        ],
+        "to": "http://www.Parkrosefarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.urbanvillageonline.com",
+          "http://www.urbanvillageonline.com/"
+        ],
+        "to": "http://www.urbanvillageonline.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.norwichfarmersmarket.org",
+          "http://www.norwichfarmersmarket.org/"
+        ],
+        "to": "http://www.norwichfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.orange.cfbf.com",
+          "http://www.orange.cfbf.com/"
+        ],
+        "to": "http://www.orange.cfbf.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.EcoStationNY.org",
+          "http://www.ecostationny.org"
+        ],
+        "to": "http://www.EcoStationNY.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.MeridianFarmersMarket.com",
+          "http://www.meridianfarmersmarket.com"
+        ],
+        "to": "http://www.MeridianFarmersMarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.arvadafarmersmarket.com",
+          "http://www.arvadafarmersmarket.com/"
+        ],
+        "to": "http://www.arvadafarmersmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.OneontaFarmersMarket.com",
+          "http://www.oneontafarmersmarket.com"
+        ],
+        "to": "http://www.OneontaFarmersMarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.AAEDC.org",
+          "http://www.aaedc.org"
+        ],
+        "to": "http://www.AAEDC.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://haymakermarket.com",
+          "http://haymakermarket.com/"
+        ],
+        "to": "http://haymakermarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://WWW.PASADENAFARMERSMARKET.ORG",
+          "http://www.pasadenafarmersmarket.org/ "
+        ],
+        "to": "http://WWW.PASADENAFARMERSMARKET.ORG"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.mcfarm.org",
+          "http://www.MCFARM.org"
+        ],
+        "to": "http://www.mcfarm.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.downtownmarket.com",
+          "http://www.downtownmarket.com/"
+        ],
+        "to": "http://www.downtownmarket.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.Hornellhpg.com",
+          "http://www.hornellhpg.com"
+        ],
+        "to": "http://www.Hornellhpg.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.capitaldistrictfarmersmarket.org",
+          "http://www.capitaldistrictfarmersmarket.org/"
+        ],
+        "to": "http://www.capitaldistrictfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://foodinroot.com",
+          "http://foodinroot.com/"
+        ],
+        "to": "http://foodinroot.com"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.cityseed.org",
+          "http://www.cityseed.org/"
+        ],
+        "to": "http://www.cityseed.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.champlainislandsfarmersmarket.com/",
+          "http://www.champlainislandsfarmersmarket.com"
+        ],
+        "to": "http://www.champlainislandsfarmersmarket.com/"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://prescottfarmersmarket.org",
+          "http://prescottfarmersmarket.org/"
+        ],
+        "to": "http://prescottfarmersmarket.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.seela.org",
+          "http://www.seela.org/"
+        ],
+        "to": "http://www.seela.org"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "http://www.saltairmarket.com",
+          "http://www.saltairmarket.com/"
+        ],
+        "to": "http://www.saltairmarket.com"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column MarketName",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "MarketName",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Main Street Farmers Market",
+          "MAIN STREET FARMERS MARKET",
+          "Main Street Farmer's Market",
+          "Main Street Farmers' Market"
+        ],
+        "to": "Main Street Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Irvington Farmers Market",
+          "Irvington Farmer's Market",
+          "Irvington Farmers Market ",
+          "Irvington Farmers' Market"
+        ],
+        "to": "Irvington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wakefield Farmer's Market",
+          "Wakefield Farmers Market",
+          "Wakefield Farmers Market "
+        ],
+        "to": "Wakefield Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Columbus Farmers Market",
+          "Columbus Farmers' Market",
+          "columbus farmers market"
+        ],
+        "to": "Columbus Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WATERTOWN FARMERS MARKET",
+          "Watertown Farmers market",
+          "Watertown Farmers' Market"
+        ],
+        "to": "WATERTOWN FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rochester Downtown Farmers Market",
+          "Downtown Rochester Farmers Market",
+          "Downtown Rochester Farmers' Market"
+        ],
+        "to": "Rochester Downtown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Harrison Farmer's Market ",
+          "Harrison Farmers Market",
+          "Harrison Farmers' Market"
+        ],
+        "to": "Harrison Farmer's Market "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Goshen Farmers Market",
+          "Goshen Farmer's Market",
+          "Goshen Farmers' Market"
+        ],
+        "to": "Goshen Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Northfield Farmers' Market",
+          "Northfield Farmer's Market",
+          "Northfield Farmers Market"
+        ],
+        "to": "Northfield Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Auburn Farmers Market",
+          "Auburn Farmer's Market",
+          "Auburn Farmers' market"
+        ],
+        "to": "Auburn Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Springfield Farmers Market",
+          "Springfield Farmer's Market",
+          "Springfield Farmers' Market"
+        ],
+        "to": "Springfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DeKalb Farmers Market",
+          "DeKalb Farmers Market ",
+          "DeKalb Farmers' Market"
+        ],
+        "to": "DeKalb Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "WARSAW FARMERS' MARKET",
+          "Warsaw Farmer's Market",
+          "Warsaw Farmers Market"
+        ],
+        "to": "WARSAW FARMERS' MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Edgewood Farmers' Market",
+          "Edgewood Farmer's Market",
+          "Edgewood Farmers Market"
+        ],
+        "to": "Edgewood Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Washington Farmers Market",
+          "Washington Farmer's Market",
+          "Washington Farmers' Market"
+        ],
+        "to": "Washington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Monticello Farmer's Market",
+          "Monticello Farmers Market",
+          "Monticello Farmers' Market"
+        ],
+        "to": "Monticello Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Monroe County Farmers Market",
+          "Monroe County Farmer's Market",
+          "Monroe County Farmers' Market"
+        ],
+        "to": "Monroe County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Grant County Farmer's Market",
+          "Grant County Farmers Market",
+          "Grant County Farmers' Market"
+        ],
+        "to": "Grant County Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Eastside Farmers Market",
+          "EASTSIDE FARMERS' MARKET",
+          "Eastside Farmers' Market"
+        ],
+        "to": "Eastside Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Franklin Farmers Market",
+          "Franklin Farmer's Market",
+          "Franklin Farmers' Market"
+        ],
+        "to": "Franklin Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Decatur Farmer's Market",
+          "Decatur Farmers Market",
+          "Decatur Farmers Market "
+        ],
+        "to": "Decatur Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Salem Farmers Market",
+          "Salem Farmers' Market",
+          "Salem Farmers' Market "
+        ],
+        "to": "Salem Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MONTGOMERY FARMERS MARKET",
+          "Montgomery Farmers Market",
+          "Montgomery Farmers' Market"
+        ],
+        "to": "MONTGOMERY FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Cooperstown Farmers Market",
+          "Cooperstown Farmers' Market"
+        ],
+        "to": "Cooperstown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Milton Farmers Market",
+          "Milton Farmers' Market"
+        ],
+        "to": "Milton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Chatham Farmer's Market",
+          "Chatham Farmers Market"
+        ],
+        "to": "Chatham Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Chelsea Farmers Market",
+          "Chelsea Farmers' Market"
+        ],
+        "to": "Chelsea Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oxford Farmers Market",
+          "OXFORD FARMERS MARKET"
+        ],
+        "to": "Oxford Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Alexandria Farmers Market",
+          "Alexandria Farmers' Market"
+        ],
+        "to": "Alexandria Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lewisburg Farmer's Market",
+          "Lewisburg Farmers Market"
+        ],
+        "to": "Lewisburg Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Benton Farmers Market",
+          "Benton Farmers' Market"
+        ],
+        "to": "Benton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bloomfield Farmers Market",
+          "Bloomfield Farmers' Market"
+        ],
+        "to": "Bloomfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Morris Farmers Market",
+          "Morris Farmers' Market"
+        ],
+        "to": "Morris Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Kingfield Farmers Market",
+          "Kingfield Farmers' Market"
+        ],
+        "to": "Kingfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lake Mills Farmers Market",
+          "Lake Mills Farmers' Market"
+        ],
+        "to": "Lake Mills Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lexington Farmers Market",
+          "Lexington Farmers' Market"
+        ],
+        "to": "Lexington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Midtown Farmers Market",
+          "Mid-Town Farmers Market"
+        ],
+        "to": "Midtown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Athens Farmers Market, L.L.C.",
+          "Athens Farmers Market, LLC"
+        ],
+        "to": "Athens Farmers Market, L.L.C."
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oak Park Farmers Market",
+          "Oak Park Farmers' Market"
+        ],
+        "to": "Oak Park Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Morgan County Farmers' Market Association",
+          "Morgan County farmers' Market Association"
+        ],
+        "to": "Morgan County Farmers' Market Association"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Greensboro Farmers Market",
+          "Greensboro Farmers' Market"
+        ],
+        "to": "Greensboro Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Downtown Laurel Farmers Market",
+          "Laurel Downtown Farmers Market"
+        ],
+        "to": "Downtown Laurel Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Holly Springs Farmers Market",
+          "Holly Springs Farmers' Market"
+        ],
+        "to": "Holly Springs Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Dutch Country Farmer's Market",
+          "Dutch Country Farmers Market"
+        ],
+        "to": "Dutch Country Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wellington Farmers Market",
+          "Wellington Farmers' Market"
+        ],
+        "to": "Wellington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ellsworth Farmers Market",
+          "Ellsworth Farmer's Market"
+        ],
+        "to": "Ellsworth Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lebanon Farmers Market",
+          "Lebanon Farmers' Market"
+        ],
+        "to": "Lebanon Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Dexter Farmers Market",
+          "Dexter Farmers' Market"
+        ],
+        "to": "Dexter Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bridgeport Farmers Market",
+          "Bridgeport Farmers' Market"
+        ],
+        "to": "Bridgeport Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Pope County Farmers Market",
+          "Pope County Farmers' Market"
+        ],
+        "to": "Pope County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Springville Farmers Market",
+          "Springville Farmers' Market"
+        ],
+        "to": "Springville Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bowie Farmers Market",
+          "Bowie Farmers' Market"
+        ],
+        "to": "Bowie Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Dillon Farmers Market",
+          "Dillon Farmers' Market"
+        ],
+        "to": "Dillon Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bethany Farmers Market",
+          "Bethany Farmers' Market"
+        ],
+        "to": "Bethany Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wayne Farmers Market",
+          "Wayne Farmers' Market"
+        ],
+        "to": "Wayne Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Clinton Farmers Market",
+          "Clinton Farmers' Market"
+        ],
+        "to": "Clinton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Farmers' Market at The Avenue ( White Marsh)",
+          "The Avenue at White Marsh Farmers Market"
+        ],
+        "to": "Farmers' Market at The Avenue ( White Marsh)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "HOPE Farmers Market",
+          "Hope Farmers Market"
+        ],
+        "to": "HOPE Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Clinton County Farmers Market",
+          "Clinton County Farmers' Market"
+        ],
+        "to": "Clinton County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hillsdale Farmers Market",
+          "Hillsdale Farmers' Market"
+        ],
+        "to": "Hillsdale Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Union County Farmers Market",
+          "Union County Farmers' Market"
+        ],
+        "to": "Union County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Highland Park Farmers Market",
+          "Highland Park Farmer's Market"
+        ],
+        "to": "Highland Park Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Freedom Farmers Market",
+          "Freedom Farmers' Market"
+        ],
+        "to": "Freedom Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Greenwich Farmers Market",
+          "Greenwich Farmers' Market"
+        ],
+        "to": "Greenwich Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Pittsburg Farmers Market",
+          "Pittsburg Farmers' Market"
+        ],
+        "to": "Pittsburg Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Anderson County Farmers Market",
+          "Anderson County Farmers Market "
+        ],
+        "to": "Anderson County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lewiston Farmers' Market",
+          "Lewiston Farmers Market"
+        ],
+        "to": "Lewiston Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fairfield Farmers Market",
+          "Fairfield Farmers' Market"
+        ],
+        "to": "Fairfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Cobblestone Farmer's Market",
+          "Cobblestone Farmers Market"
+        ],
+        "to": "Cobblestone Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sunnyvale Farmers Market",
+          "Sunnyvale Farmers' Market"
+        ],
+        "to": "Sunnyvale Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lancaster Farmers Market",
+          "Lancaster Farmers'  Market"
+        ],
+        "to": "Lancaster Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rye Farmers Market",
+          "Rye Farmers' Market"
+        ],
+        "to": "Rye Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ada Farmer's Market",
+          "Ada Farmers' Market"
+        ],
+        "to": "Ada Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Norwood Farmers Market",
+          "Norwood Farmers' Market"
+        ],
+        "to": "Norwood Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Brighton Farmers Market",
+          "Brighton Farmers' Market"
+        ],
+        "to": "Brighton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Downtown Farmers Market",
+          "Downtown Farmers' Market"
+        ],
+        "to": "Downtown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Franklin County Farmers Market",
+          "Franklin County Farmers' Market"
+        ],
+        "to": "Franklin County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "New Haven Farmers Market",
+          "New Haven Farmers' Market"
+        ],
+        "to": "New Haven Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Windsor Farmers Market",
+          "Windsor Farmers' Market"
+        ],
+        "to": "Windsor Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mount Vernon Farmers Market",
+          "Mount Vernon Farmers' Market"
+        ],
+        "to": "Mount Vernon Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MIDDLETON FARMERS MARKET",
+          "Middleton Farmers Market"
+        ],
+        "to": "MIDDLETON FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Farmers' gateway Market",
+          "Gateway Farmers Market"
+        ],
+        "to": "Farmers' gateway Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Torrington Farmers Market",
+          "Torrington Farmer's Market"
+        ],
+        "to": "Torrington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Montclair Farmers Market",
+          "Montclair Farmers' Market"
+        ],
+        "to": "Montclair Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Conway Farmers Market",
+          "Conway Farmers' Market"
+        ],
+        "to": "Conway Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Germantown Farmers Market",
+          "Germantown Farmers' Market"
+        ],
+        "to": "Germantown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rutherford County Farmers Market",
+          "Rutherford County Farmers' Market"
+        ],
+        "to": "Rutherford County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ivanhoe Farmers Market",
+          "Ivanhoe Farmers' Market"
+        ],
+        "to": "Ivanhoe Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Scott County Farmers' Market",
+          "Scott County Farmers Market"
+        ],
+        "to": "Scott County Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Greenfield Farmers Market",
+          "Greenfield Farmer's Market"
+        ],
+        "to": "Greenfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Carbondale Farmers Market",
+          "Carbondale Farmers' Market"
+        ],
+        "to": "Carbondale Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Alma Farmers Market",
+          "Alma Farmers' Market"
+        ],
+        "to": "Alma Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Richland Farmers Market",
+          "Richland Farmers' Market"
+        ],
+        "to": "Richland Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Atascadero  Farmers Market",
+          "Atascadero Farmers Market"
+        ],
+        "to": "Atascadero  Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Phillip's Farmers Market",
+          "Phillips Farmers' Market"
+        ],
+        "to": "Phillip's Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bushwick Farmers' Market",
+          "Bushwick Farmers' Market "
+        ],
+        "to": "Bushwick Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hartland Farmer's Market",
+          "Hartland Farmers' Market"
+        ],
+        "to": "Hartland Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Brunswick Farmer's Market",
+          "Brunswick Farmers Market"
+        ],
+        "to": "Brunswick Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Canton Farmers Market",
+          "Canton Farmers' Market"
+        ],
+        "to": "Canton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lyndon Farmers Market",
+          "Lyndon Farmers' Market"
+        ],
+        "to": "Lyndon Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Georgetown Farmers Market",
+          "Georgetown Farmers' Market"
+        ],
+        "to": "Georgetown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Deerfield Farmer's Market",
+          "Deerfield Farmers Market"
+        ],
+        "to": "Deerfield Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CORTE BELLA FARMERS' MARKET",
+          "Corte Bella Farmers Market"
+        ],
+        "to": "CORTE BELLA FARMERS' MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "SMYRNA FARMERS' MARKET ",
+          "Smyrna Farmers Market"
+        ],
+        "to": "SMYRNA FARMERS' MARKET "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Johnson County Farmers Market",
+          "Johnson County Farmers' Market"
+        ],
+        "to": "Johnson County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Perry Farmers Market",
+          "Perry Farmers' Market"
+        ],
+        "to": "Perry Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bellevue Farmers Market",
+          "Bellevue Farmers' Market"
+        ],
+        "to": "Bellevue Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "West End Farmers Market",
+          "West End Farmer's Market"
+        ],
+        "to": "West End Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "El Dorado Farmers Market ",
+          "El Dorado Farmers' Market"
+        ],
+        "to": "El Dorado Farmers Market "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bangor Farmers Market",
+          "Bangor Farmers' Market"
+        ],
+        "to": "Bangor Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bedford Farmers Market",
+          "Bedford Farmer's Market"
+        ],
+        "to": "Bedford Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rocky Mount Farmers Market",
+          "Rocky Mount Farmers' Market"
+        ],
+        "to": "Rocky Mount Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Dubois Farmers Market",
+          "Dubois Farmers' Market"
+        ],
+        "to": "Dubois Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Falmouth Farmers Market",
+          "Falmouth Farmers' Market"
+        ],
+        "to": "Falmouth Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Greater Baldwinsville & Camillus Farmers' Market (Baldwinsville Location)",
+          "Greater Baldwinsville & Camillus Farmers' Market (Camillus Location)"
+        ],
+        "to": "Greater Baldwinsville & Camillus Farmers' Market (Baldwinsville Location)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Plymouth Farmers Market",
+          "Plymouth Farmers' Market"
+        ],
+        "to": "Plymouth Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Barre Farmer's Market",
+          "Barre Farmers Market"
+        ],
+        "to": "Barre Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Highland Farmers Market",
+          "Highland Farmers' Market"
+        ],
+        "to": "Highland Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FARMERS' MARKET - LINCOLN",
+          "Lincoln Farmers' Market"
+        ],
+        "to": "FARMERS' MARKET - LINCOLN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Moreno Valley Farmers Market",
+          "Moreno Valley Farmers' Market"
+        ],
+        "to": "Moreno Valley Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Davenport Farmers Market",
+          "Davenport Farmers' Market"
+        ],
+        "to": "Davenport Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Farmington Farmers Market",
+          "Farmington Farmers' Market"
+        ],
+        "to": "Farmington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Madison County Farmers Market",
+          "Madison County Farmers' Market"
+        ],
+        "to": "Madison County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Farmers Market",
+          "Farmers Market "
+        ],
+        "to": "Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Forsyth Farmers' Market",
+          "Forsyth Farmers Market"
+        ],
+        "to": "Forsyth Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Chestertown Farmer's Market",
+          "Chestertown Farmers' Market"
+        ],
+        "to": "Chestertown Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "18th Street Farmer's Market",
+          "18th Street Farmers Market"
+        ],
+        "to": "18th Street Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Galena Farmers Market",
+          "Galena Farmers' Market"
+        ],
+        "to": "Galena Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Oak Harbor Farmer's Market ",
+          "Oak Harbor Farmers Market"
+        ],
+        "to": "Oak Harbor Farmer's Market "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Danbury Farmers Market",
+          "Danbury Farmers' Market"
+        ],
+        "to": "Danbury Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Glen Rock Farmer's Market",
+          "Glen Rock Farmers Market"
+        ],
+        "to": "Glen Rock Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bowling Green Community Farmers Market",
+          "Community Farmers Market Bowling Green"
+        ],
+        "to": "Bowling Green Community Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Clayton Farmers Market",
+          "Clayton Farmers' Market"
+        ],
+        "to": "Clayton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jonesboro Farmers Market",
+          "Jonesboro Farmers Market "
+        ],
+        "to": "Jonesboro Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Westfield Farmers Market",
+          "Westfield Farmers' Market"
+        ],
+        "to": "Westfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Brookfield Farmers Market",
+          "Brookfield Farmers' Market"
+        ],
+        "to": "Brookfield Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Woodstock Farmers Market",
+          "Woodstock Farmers' Market"
+        ],
+        "to": "Woodstock Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Montgomery County Farmers Market",
+          "Montgomery County Farmers' Market"
+        ],
+        "to": "Montgomery County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Freeport Farmers Market",
+          "Freeport Farmers' Market"
+        ],
+        "to": "Freeport Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Shelby County Farmers Market",
+          "Shelby County Farmer's Market"
+        ],
+        "to": "Shelby County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Carlisle Farmers Market",
+          "Carlisle Farmer's Market"
+        ],
+        "to": "Carlisle Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Elberta Farmer's Market",
+          "Elberta Farmers Market"
+        ],
+        "to": "Elberta Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hollywood Farmers Market",
+          "Hollywood Farmers' Market"
+        ],
+        "to": "Hollywood Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Farmers' Friday Market",
+          "Friday Farmers Market"
+        ],
+        "to": "Farmers' Friday Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Forest Farmer's Market",
+          "Forest farmers market"
+        ],
+        "to": "Forest Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Vicksburg Farmers Market",
+          "Vicksburg Farmers' Market"
+        ],
+        "to": "Vicksburg Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Boulder Farmers Market",
+          "Boulder Farmers Market "
+        ],
+        "to": "Boulder Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Easton Farmers' Market",
+          "Easton Farmers Market"
+        ],
+        "to": "Easton Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Warren Farmers Market",
+          "Warren Farmer's Market"
+        ],
+        "to": "Warren Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Perry County Farmers Market",
+          "Perry County FARMERS' MARKET"
+        ],
+        "to": "Perry County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Holland  Farmers Market",
+          "Holland Farmers Market"
+        ],
+        "to": "Holland  Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hub City Farmers Market",
+          "Hub City Farmers' Market"
+        ],
+        "to": "Hub City Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Madeira Farmers Market",
+          "Madeira Farmers' Market"
+        ],
+        "to": "Madeira Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Belleville Farmer's Market",
+          "Belleville Farmers Market"
+        ],
+        "to": "Belleville Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Belmont Farmers Market",
+          "Belmont Farmers' Market"
+        ],
+        "to": "Belmont Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Westside Farmers Market",
+          "WESTSIDE FARMERS' MARKET"
+        ],
+        "to": "Westside Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Market Square",
+          "Square Market"
+        ],
+        "to": "Market Square"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Putnam County Farmers Market",
+          "Putnam County Farmers' Market"
+        ],
+        "to": "Putnam County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Trenton Farmers' Market",
+          "Trenton Farmers Market"
+        ],
+        "to": "Trenton Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ABBEVILLE FARMERS MARKET",
+          "Abbeville Farmers Market"
+        ],
+        "to": "ABBEVILLE FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hyde Park Farmers Market",
+          "Hyde Park Farmers' Market"
+        ],
+        "to": "Hyde Park Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Carthage Farmers Market",
+          "Carthage Farmers' Market"
+        ],
+        "to": "Carthage Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Clark Park Farmer's Market",
+          "Clark Park Farmers' Market"
+        ],
+        "to": "Clark Park Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ramsey Farmers Market",
+          "Ramsey Farmers Market "
+        ],
+        "to": "Ramsey Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MARSHFIELD FARMERS MARKET",
+          "Marshfield Farmer's Market"
+        ],
+        "to": "MARSHFIELD FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Vail Farmers Market",
+          "Vail Farmers Market "
+        ],
+        "to": "Vail Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Nashville Farmer's Market",
+          "Nashville Farmers' Market"
+        ],
+        "to": "Nashville Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Richland County Farmer's Market",
+          "Richland County Farmers Market"
+        ],
+        "to": "Richland County Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Waverly Farmers' Market",
+          "Waverly Farmers Market"
+        ],
+        "to": "Waverly Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hoxie Farmers Market",
+          "Hoxie Farmers' Market"
+        ],
+        "to": "Hoxie Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lee Farmers Market",
+          "Lee Farmers\" Market"
+        ],
+        "to": "Lee Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Johnstown Farmers Market",
+          "Johnstown Farmers' Market"
+        ],
+        "to": "Johnstown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "El Mercado Familiar",
+          "EL MERCADO FAMILIAR"
+        ],
+        "to": "El Mercado Familiar"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St. Charles Farmers Market",
+          "St. Charles Farmers' Market"
+        ],
+        "to": "St. Charles Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hancock Farmers Market",
+          "Hancock Farmers' Market"
+        ],
+        "to": "Hancock Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "City Hall Farmers Market",
+          "City Hall Farmer's Market"
+        ],
+        "to": "City Hall Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fulton Farmers Market",
+          "Fulton Farmers' Market"
+        ],
+        "to": "Fulton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Village Farmers Market",
+          "Village Farmers' Market"
+        ],
+        "to": "Village Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Northeast Michigan Regional Farm Market",
+          "northeast michigan regional farm market"
+        ],
+        "to": "Northeast Michigan Regional Farm Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Burlington Farmers Market",
+          "Burlington Farmers' Market"
+        ],
+        "to": "Burlington Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lowell Farmers' Market",
+          "Lowell Farmers Market"
+        ],
+        "to": "Lowell Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Newport Farmer's Market",
+          "Newport Farmers' Market"
+        ],
+        "to": "Newport Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mount Pleasant Farmers Market",
+          "Mount Pleasant Farmers' Market"
+        ],
+        "to": "Mount Pleasant Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Pine City Farmers Market",
+          "Pine City Farmers' Market"
+        ],
+        "to": "Pine City Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rose City Farmers Market",
+          "Rose city farmers market"
+        ],
+        "to": "Rose City Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Marion Farmers Market",
+          "Marion Farmers' Market"
+        ],
+        "to": "Marion Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Newark Farmers Market",
+          "Newark Farmers' Market"
+        ],
+        "to": "Newark Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "BOISE FARMERS MARKET",
+          "Boise Farmers Market"
+        ],
+        "to": "BOISE FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lone Star Farmer's Market",
+          "Lone Star Farmers Market"
+        ],
+        "to": "Lone Star Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Helena Farmers Market",
+          "Helena farmers market"
+        ],
+        "to": "Helena Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bath County Farmers Market",
+          "Bath County Farmers' Market"
+        ],
+        "to": "Bath County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jefferson Farmers Market",
+          "Jefferson Farmers' Market"
+        ],
+        "to": "Jefferson Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "North Central Farmers Market",
+          "North Central Farmers' Market"
+        ],
+        "to": "North Central Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Petersburg Farmers Market",
+          "Petersburg' Farmers Market"
+        ],
+        "to": "Petersburg Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Dallas Farmers Market",
+          "Dallas Farmers' Market"
+        ],
+        "to": "Dallas Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "DeWitt Farmers Market",
+          "Dewitt Farmers Market"
+        ],
+        "to": "DeWitt Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Middletown Farmers Market",
+          "Middletown Farmers' Market"
+        ],
+        "to": "Middletown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Alliance Farmers Market",
+          "Alliance Farmers' Market"
+        ],
+        "to": "Alliance Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Northeast Farmers Market",
+          "Northeast Farmers' Market"
+        ],
+        "to": "Northeast Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Walton Farmers Market",
+          "Walton Farmers' Market"
+        ],
+        "to": "Walton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mentor Farmers Market",
+          "Mentor Farmers' Market"
+        ],
+        "to": "Mentor Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Erie Farmers Market",
+          "Erie Farmers' Market"
+        ],
+        "to": "Erie Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hawthorne Farmer's Market ",
+          "Hawthorne Farmers Market"
+        ],
+        "to": "Hawthorne Farmer's Market "
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Sheridan Farmers Market",
+          "Sheridan Farmers' Market"
+        ],
+        "to": "Sheridan Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Randolph County Farmers Market",
+          "Randolph County Farmers' Market"
+        ],
+        "to": "Randolph County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Jackson County Farmers Market",
+          "Jackson County Farmers market"
+        ],
+        "to": "Jackson County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fayette County Farmers Market",
+          "Fayette County Farmers' Market"
+        ],
+        "to": "Fayette County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Roots & Stems Community Farmers Market",
+          "Roots & Stems Community Farmers' Market"
+        ],
+        "to": "Roots & Stems Community Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Columbus Downtown Farmer's Market",
+          "Downtown Columbus Farmers Market"
+        ],
+        "to": "Columbus Downtown Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lake Placid Farmers Market",
+          "Lake Placid Farmers' Market "
+        ],
+        "to": "Lake Placid Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Eureka Farmers Market",
+          "Eureka Farmers' Market"
+        ],
+        "to": "Eureka Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bristol Farmers Market",
+          "Bristol Farmers' Market"
+        ],
+        "to": "Bristol Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MCCOMB FARMERS' MARKET",
+          "McComb Farmers Market"
+        ],
+        "to": "MCCOMB FARMERS' MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Kingston Farmers Market",
+          "Kingston Farmers' Market"
+        ],
+        "to": "Kingston Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mercer County Farmers Market",
+          "Mercer County Farmers' Market"
+        ],
+        "to": "Mercer County Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lafayette Farmers Market",
+          "Lafayette Farmers' Market"
+        ],
+        "to": "Lafayette Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Brownsville Farmers Market",
+          "Brownsville Farmers' Market"
+        ],
+        "to": "Brownsville Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Burlington Downtown Farmers Market",
+          "Downtown Burlington Farmers Market"
+        ],
+        "to": "Burlington Downtown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "BERLIN FARMERS MARKET",
+          "Berlin  Farmers' Market"
+        ],
+        "to": "BERLIN FARMERS MARKET"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ennis Farmer's Market",
+          "Ennis Farmers Market"
+        ],
+        "to": "Ennis Farmer's Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Princeton Farmers Market",
+          "Princeton Farmers' Market"
+        ],
+        "to": "Princeton Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Historic Newburgh Farmers Market",
+          "Historic Newburgh Farmers Market "
+        ],
+        "to": "Historic Newburgh Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Morgantown Farmers Market",
+          "Morgantown Farmers' Market"
+        ],
+        "to": "Morgantown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Marysville Farmers Market",
+          "Marysville Farmers' Market"
+        ],
+        "to": "Marysville Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fairfax Community Farmers' Market",
+          "Fairfax Community Farmers' Market "
+        ],
+        "to": "Fairfax Community Farmers' Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bourbon Farmers Market",
+          "Bourbon Farmers' Market"
+        ],
+        "to": "Bourbon Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Independence Farmers Market",
+          "Independence Farmers' Market"
+        ],
+        "to": "Independence Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Market in the Loop",
+          "The Market in the Loop"
+        ],
+        "to": "Market in the Loop"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Northville Farmers Market",
+          "Northville Farmers' Market"
+        ],
+        "to": "Northville Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Andover Farmers Market",
+          "Andover Farmers' Market"
+        ],
+        "to": "Andover Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Albany  Downtown Farmers Market",
+          "Downtown Albany Farmers Market"
+        ],
+        "to": "Albany  Downtown Farmers Market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Hobart Farmers Market",
+          "Hobart Farmers' Market"
+        ],
+        "to": "Hobart Farmers Market"
+      }
+    ]
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column zip to position 15",
+    "columnName": "zip",
+    "index": 15
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column zip_clean to position 16",
+    "columnName": "zip_clean",
+    "index": 16
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season1Date to position 17",
+    "columnName": "Season1Date",
+    "index": 17
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season1Time to position 20",
+    "columnName": "Season1Time",
+    "index": 20
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season2Date to position 28",
+    "columnName": "Season2Date",
+    "index": 28
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season2Time to position 31",
+    "columnName": "Season2Time",
+    "index": 31
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season3Date to position 39",
+    "columnName": "Season3Date",
+    "index": 39
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season3Time to position 42",
+    "columnName": "Season3Time",
+    "index": 42
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season4Date to position 50",
+    "columnName": "Season4Date",
+    "index": 50
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Season4Time to position 53",
+    "columnName": "Season4Time",
+    "index": 53
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column updateyear to position 101",
+    "columnName": "updateyear",
+    "index": 101
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Sunday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Sunday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Saturday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Saturday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Friday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Friday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Thursday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Thursday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Wednesdays using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Wednesdays",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Tuesday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Tuesday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season1Monday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season1Monday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Sunday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Sunday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Saturday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Saturday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Friday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Friday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Thursday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Thursday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Wednesdays using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Wednesdays",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Tuesday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Tuesday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season2Monday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season2Monday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Sunday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Sunday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Saturday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Saturday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Friday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Friday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Thursday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Thursday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Wednesdays using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Wednesdays",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Tuesday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Tuesday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season3Monday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season3Monday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Sunday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Sunday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Saturday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Saturday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Friday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Friday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Thursday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Thursday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Wednesdays using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Wednesdays",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Tuesday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Tuesday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Season4Monday using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Season4Monday",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Credit_clean at index 65 based on column Credit using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Credit_clean",
+    "columnInsertIndex": 65,
+    "baseColumnName": "Credit",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column WIC_clean at index 67 based on column WIC using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "WIC_clean",
+    "columnInsertIndex": 67,
+    "baseColumnName": "WIC",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column WICcash_clean at index 69 based on column WICcash using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "WICcash_clean",
+    "columnInsertIndex": 69,
+    "baseColumnName": "WICcash",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column SFMNP_clean at index 71 based on column SFMNP using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "SFMNP_clean",
+    "columnInsertIndex": 71,
+    "baseColumnName": "SFMNP",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column SNAP_clean at index 73 based on column SNAP using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "SNAP_clean",
+    "columnInsertIndex": 73,
+    "baseColumnName": "SNAP",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organic_clean using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organic_clean",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Bakedgoods_clean at index 77 based on column Bakedgoods using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Bakedgoods_clean",
+    "columnInsertIndex": 77,
+    "baseColumnName": "Bakedgoods",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Cheese_clean at index 79 based on column Cheese using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Cheese_clean",
+    "columnInsertIndex": 79,
+    "baseColumnName": "Cheese",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Crafts_clean at index 81 based on column Crafts using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Crafts_clean",
+    "columnInsertIndex": 81,
+    "baseColumnName": "Crafts",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Flowers_clean at index 83 based on column Flowers using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Flowers_clean",
+    "columnInsertIndex": 83,
+    "baseColumnName": "Flowers",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Eggs_clean at index 85 based on column Eggs using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Eggs_clean",
+    "columnInsertIndex": 85,
+    "baseColumnName": "Eggs",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Seafood_clean at index 87 based on column Seafood using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Seafood_clean",
+    "columnInsertIndex": 87,
+    "baseColumnName": "Seafood",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Herbs_clean at index 89 based on column Herbs using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Herbs_clean",
+    "columnInsertIndex": 89,
+    "baseColumnName": "Herbs",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Vegetables_clean at index 91 based on column Vegetables using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Vegetables_clean",
+    "columnInsertIndex": 91,
+    "baseColumnName": "Vegetables",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Honey_clean at index 93 based on column Honey using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Honey_clean",
+    "columnInsertIndex": 93,
+    "baseColumnName": "Honey",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Jams_clean at index 95 based on column Jams using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Jams_clean",
+    "columnInsertIndex": 95,
+    "baseColumnName": "Jams",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Maple_clean at index 97 based on column Maple using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Maple_clean",
+    "columnInsertIndex": 97,
+    "baseColumnName": "Maple",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Meat_clean at index 99 based on column Meat using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Meat_clean",
+    "columnInsertIndex": 99,
+    "baseColumnName": "Meat",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Nursery_clean at index 101 based on column Nursery using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Nursery_clean",
+    "columnInsertIndex": 101,
+    "baseColumnName": "Nursery",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Nuts_clean at index 103 based on column Nuts using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Nuts_clean",
+    "columnInsertIndex": 103,
+    "baseColumnName": "Nuts",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Plants_clean at index 105 based on column Plants using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Plants_clean",
+    "columnInsertIndex": 105,
+    "baseColumnName": "Plants",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Poultry_clean at index 107 based on column Poultry using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Poultry_clean",
+    "columnInsertIndex": 107,
+    "baseColumnName": "Poultry",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Prepared_clean at index 109 based on column Prepared using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Prepared_clean",
+    "columnInsertIndex": 109,
+    "baseColumnName": "Prepared",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Soap_clean at index 111 based on column Soap using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Soap_clean",
+    "columnInsertIndex": 111,
+    "baseColumnName": "Soap",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Trees_clean at index 113 based on column Trees using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Trees_clean",
+    "columnInsertIndex": 113,
+    "baseColumnName": "Trees",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Wine_clean at index 115 based on column Wine using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Wine_clean",
+    "columnInsertIndex": 115,
+    "baseColumnName": "Wine",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Coffee_clean at index 117 based on column Coffee using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Coffee_clean",
+    "columnInsertIndex": 117,
+    "baseColumnName": "Coffee",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Beans_clean at index 119 based on column Beans using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Beans_clean",
+    "columnInsertIndex": 119,
+    "baseColumnName": "Beans",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Fruits_clean at index 121 based on column Fruits using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Fruits_clean",
+    "columnInsertIndex": 121,
+    "baseColumnName": "Fruits",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Grains_clean at index 123 based on column Grains using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Grains_clean",
+    "columnInsertIndex": 123,
+    "baseColumnName": "Grains",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Juices_clean at index 125 based on column Juices using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Juices_clean",
+    "columnInsertIndex": 125,
+    "baseColumnName": "Juices",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Mushrooms_clean at index 127 based on column Mushrooms using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Mushrooms_clean",
+    "columnInsertIndex": 127,
+    "baseColumnName": "Mushrooms",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column PetFood_clean at index 129 based on column PetFood using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "PetFood_clean",
+    "columnInsertIndex": 129,
+    "baseColumnName": "PetFood",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Tofu_clean at index 131 based on column Tofu using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Tofu_clean",
+    "columnInsertIndex": 131,
+    "baseColumnName": "Tofu",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column WildHarvested_clean at index 133 based on column WildHarvested using expression jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "WildHarvested_clean",
+    "columnInsertIndex": 133,
+    "baseColumnName": "WildHarvested",
+    "expression": "jython:if value =='Y':\n  return 1\nif value =='N':\n  return 0",
+    "onError": "set-to-blank"
+  }
+]

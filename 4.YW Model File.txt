@@ -1,0 +1,190 @@
+# @begin End_to_End_Data_Cleaning  @desc Clean Farmers Market Data use OpenRefine and store in Mysql
+# @in Farmers_Market_Data  @file farmersmarkets.csv
+# @out Mysql_Table
+# @out season_date_ic_checked
+# @out season_year_ic_checked
+# @out product_offering_ic_checked
+# @out payment_choice_ic_check
+
+#     @begin Extract_Data_into_OpenRefine  @desc load the farmersmarkets.csv into OpenRefine
+#     @in Farmers_Market_Data
+#     @out OpenRefineTable[location]
+#     @out OpenRefineTable[contact]
+#     @out OpenRefineTable[operation_time]
+#     @out OpenRefineTable[product_offering]
+#     @out OpenRefineTable[payment_choice]
+#     @end Extract_Data_into_OpenRefine
+
+#     @begin Clean_location  @desc clean location information
+#     @in OpenRefineTable[location]
+#     @out OpenRefineColumn[street]
+#     @out OpenRefineColumn[city]
+#     @out OpenRefineColumn[county]
+#     @out OpenRefineColumn[state]
+#     @out OpenRefineColumn[zip]
+#     @out OpenRefineColumn[x]
+#     @out OpenRefineColumn[y]
+#     @out OpenRefineColumn[locations]
+#     @end Clean_location
+
+#         @begin Clean_city  @desc uppercase city names, trim begin and end blank, cluster and merge
+#         @in OpenRefineColumn[city]
+#         @out OpenRefineColumn[city_clean]
+#         @end Clean_city
+
+#         @begin Clean_county  @desc cluster and merge
+#         @in OpenRefineColumn[county]
+#         @out OpenRefineColumn[county_clean]
+#         @end Clean_county
+
+#         @begin Clean_zip  @desc find missing value, fix typo error, change different format to 5 digits
+#         @in OpenRefineColumn[zip]
+#         @out OpenRefineColumn[zip_clean]
+#         @end Clean_zip
+
+#         @begin Clean_x  @desc transfer x into float number
+#         @in OpenRefineColumn[x]
+#         @out OpenRefineColumn[x_clean]
+#         @end Clean_x
+
+#         @begin Clean_y  @desc transfer y into float number
+#         @in OpenRefineColumn[y]
+#         @out OpenRefineColumn[y_clean]
+#         @end Clean_y
+
+
+
+#     @begin Clean_contact
+#     @in OpenRefineTable[contact]
+#     @out OpenRefineColumn[Market_Name]
+#     @out OpenRefineColumn[Website]
+#     @out OpenRefineColumn[Facebook]
+#     @out OpenRefineColumn[Twitter]
+#     @out OpenRefineColumn[Youtube]
+#     @out OpenRefineColumn[other_Media]
+#     @end Clean_contact
+
+#         @begin Clean_Market_Name  @desc cluster and merge,
+#         @in OpenRefineColumn[Market_Name]
+#         @out OpenRefineColumn[Market_Name_clean]
+#         @end Clean_Market_Name
+
+#         @begin Clean_website  @desc cluster and merge
+#         @in OpenRefineColumn[Website]
+#         @out OpenRefineColumn[website_clean]
+#         @end Clean_website
+
+#         @begin Clean_facebook  @desc add domain to those missing, transfer string into link, cluster and merge
+#         @in OpenRefineColumn[Facebook]
+#         @out OpenRefineColumn[facebook_clean]
+#         @end Clean_facebook
+
+#         @begin Clean_twitter  @desc add domain to those missing, transfer string into link, cluster and merge
+#         @in OpenRefineColumn[Twitter]
+#         @out OpenRefineColumn[twitter_clean]
+#         @end Clean_twitter
+
+
+
+#     @begin Clean_operation_time
+#     @in OpenRefineTable[operation_time]
+#     @out OpenRefineColumn[season_date]
+#     @out OpenRefineColumn[season_time]
+#     @out OpenRefineColumn[Updatetime]
+#     @end Clean_operation_time
+
+#         @begin Clean_updatedate  @desc transfer into date format, generate new column updateyear
+#         @in OpenRefineColumn[Updatetime]
+#         @out OpenRefineColumn[updateyear]
+#         @out OpenRefineColumn[updatedate_clean]
+#         @end Clean_updatedate
+
+#         @begin Clean_season_date  @desc replace name of month into number, split into start and end date, trim the start and end blank, add update year for those missed year, transfer into date format
+#         @in OpenRefineColumn[season_date]
+#         @in OpenRefineColumn[updateyear]
+#         @out OpenRefineColumn[season_date_start]
+#         @out OpenRefineColumn[season_date_end]
+#         @end Clean_season_date
+
+#         @begin Clean_season_time  @desc split into each day of the week, trim the start and end blank, add update year for those missed year, transfer into date format
+#         @in OpenRefineColumn[season_time]
+#         @out OpenRefineColumn[season_time_Monday]
+#         @out OpenRefineColumn[season_time_Tuesday]
+#         @out OpenRefineColumn[season_time_Wendesday]
+#         @out OpenRefineColumn[season_time_Thursday]
+#         @out OpenRefineColumn[season_time_Friday]
+#         @out OpenRefineColumn[season_time_Saturday]
+#         @out OpenRefineColumn[season_time_Sunday]
+#         @end Clean_season_time
+
+
+
+#     @begin Clean_product_offering
+#     @in OpenRefineTable[product_offering]
+#     @out OpenRefineTable[product_offering_Organic]
+#     @out OpenRefineColumn[product_offering_Other]
+#     @end Clean_product_offering
+
+#         @begin Clean_product_offering_Organic  @desc clean the '-' in 'Organic
+#         @in OpenRefineTable[product_offering_Organic]
+#         @out OpenRefineTable[product_offering_Organic_clean]
+#         @end Clean_product_offering_Organic
+
+
+#     @begin integrity_constraints_date @desc season_date_start before season_date_end
+#     @in OpenRefineColumn[season_date_start]
+#     @in OpenRefineColumn[season_date_end]
+#     @out season_date_ic_checked
+#     @end integrity_constraints_date
+
+#     @begin integrity_constraints_year @desc season_date should be in the same year of updateyear
+#     @in OpenRefineColumn[season_date_start]
+#     @in OpenRefineColumn[season_date_end]
+#     @in OpenRefineColumn[updateyear]
+#     @out season_year_ic_checked
+#     @end integrity_constraints_date
+
+#     @begin integrity_constraints_product_buyable @desc there should be at least one product buyable
+#     @in OpenRefineTable[product_offering_Organic_clean]
+#     @in OpenRefineColumn[product_offering_Other]
+#     @out product_offering_ic_checked
+#     @end integrity_constraints_product_buyable
+
+#     @begin integrity_constraints_payment_available
+#     @in OpenRefineTable[payment_choice]
+#     @out payment_choice_ic_check
+#     @end integrity_constraints_payment_available
+
+#     @begin load_into_mysql
+#     @in OpenRefineTable[payment_choice]
+#     @in OpenRefineColumn[street]
+#     @in OpenRefineColumn[state]
+#     @in OpenRefineColumn[city_clean]
+#     @in OpenRefineColumn[county_clean]
+#     @in OpenRefineColumn[zip_clean]
+#     @in OpenRefineColumn[x_clean]
+#     @in OpenRefineColumn[y_clean]
+#     @in OpenRefineColumn[locations]
+#     @in OpenRefineColumn[Market_Name_clean]
+#     @in OpenRefineColumn[website_clean]
+#     @in OpenRefineColumn[facebook_clean]
+#     @in OpenRefineColumn[twitter_clean]
+#     @in OpenRefineColumn[other_Media]
+#     @in OpenRefineColumn[Youtube]
+#     @in OpenRefineColumn[updatedate_clean]
+#     @in OpenRefineColumn[season_date_start]
+#     @in OpenRefineColumn[season_date_end]
+#     @in OpenRefineColumn[season_time_Monday]
+#     @in OpenRefineColumn[season_time_Tuesday]
+#     @in OpenRefineColumn[season_time_Wendesday]
+#     @in OpenRefineColumn[season_time_Thursday]
+#     @in OpenRefineColumn[season_time_Friday]
+#     @in OpenRefineColumn[season_time_Saturday]
+#     @in OpenRefineColumn[season_time_Sunday]
+#     @in OpenRefineColumn[product_offering_Other]
+#     @in OpenRefineTable[product_offering_Organic_clean]
+#     @out Mysql_Table
+#     @end load_into_mysql
+
+
+# @end End_to_End_Data_Cleaning

@@ -1,0 +1,239 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=LR
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=End_to_End_Data_Cleaning
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+Extract_Data_into_OpenRefine [shape=record rankdir=LR label="{{<f0> Extract_Data_into_OpenRefine |<f1> load the farmersmarkets.csv into OpenRefine}}"];
+Clean_location [shape=record rankdir=LR label="{{<f0> Clean_location |<f1> clean location information}}"];
+Clean_city [shape=record rankdir=LR label="{{<f0> Clean_city |<f1> uppercase city names, trim begin and end blank, cluster and merge}}"];
+Clean_county [shape=record rankdir=LR label="{{<f0> Clean_county |<f1> cluster and merge}}"];
+Clean_zip [shape=record rankdir=LR label="{{<f0> Clean_zip |<f1> find missing value, fix typo error, change different format to 5 digits}}"];
+Clean_x [shape=record rankdir=LR label="{{<f0> Clean_x |<f1> transfer x into float number}}"];
+Clean_y [shape=record rankdir=LR label="{{<f0> Clean_y |<f1> transfer y into float number}}"];
+Clean_contact
+Clean_Market_Name [shape=record rankdir=LR label="{{<f0> Clean_Market_Name |<f1> cluster and merge,}}"];
+Clean_website [shape=record rankdir=LR label="{{<f0> Clean_website |<f1> cluster and merge}}"];
+Clean_facebook [shape=record rankdir=LR label="{{<f0> Clean_facebook |<f1> add domain to those missing, transfer string into link, cluster and merge}}"];
+Clean_twitter [shape=record rankdir=LR label="{{<f0> Clean_twitter |<f1> add domain to those missing, transfer string into link, cluster and merge}}"];
+Clean_operation_time
+Clean_updatedate [shape=record rankdir=LR label="{{<f0> Clean_updatedate |<f1> transfer into date format, generate new column updateyear}}"];
+Clean_season_date [shape=record rankdir=LR label="{{<f0> Clean_season_date |<f1> replace name of month into number, split into start and end date, trim the start and end blank, add update year for those missed year, transfer into date format}}"];
+Clean_season_time [shape=record rankdir=LR label="{{<f0> Clean_season_time |<f1> split into each day of the week, trim the start and end blank, add update year for those missed year, transfer into date format}}"];
+Clean_product_offering
+Clean_product_offering_Organic [shape=record rankdir=LR label="{{<f0> Clean_product_offering_Organic |<f1> clean the '-' in 'Organic}}"];
+integrity_constraints_date [shape=record rankdir=LR label="{{<f0> integrity_constraints_date |<f1> season_date_start before season_date_end}}"];
+integrity_constraints_year [shape=record rankdir=LR label="{{<f0> integrity_constraints_year |<f1> season_date should be in the same year of updateyear}}"];
+integrity_constraints_product_buyable [shape=record rankdir=LR label="{{<f0> integrity_constraints_product_buyable |<f1> there should be at least one product buyable}}"];
+integrity_constraints_payment_available
+load_into_mysql
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+Mysql_Table
+season_date_ic_checked
+season_year_ic_checked
+product_offering_ic_checked
+payment_choice_ic_check
+Farmers_Market_Data [shape=record rankdir=LR label="{{<f0> Farmers_Market_Data |<f1> farmersmarkets.csv}}"];
+"OpenRefineTable[location]"
+"OpenRefineColumn[city]"
+"OpenRefineColumn[county]"
+"OpenRefineColumn[zip]"
+"OpenRefineColumn[x]"
+"OpenRefineColumn[y]"
+"OpenRefineTable[contact]"
+"OpenRefineColumn[Market_Name]"
+"OpenRefineColumn[Website]"
+"OpenRefineColumn[Facebook]"
+"OpenRefineColumn[Twitter]"
+"OpenRefineTable[operation_time]"
+"OpenRefineColumn[Updatetime]"
+"OpenRefineColumn[season_date]"
+"OpenRefineColumn[updateyear]"
+"OpenRefineColumn[season_time]"
+"OpenRefineTable[product_offering]"
+"OpenRefineTable[product_offering_Organic]"
+"OpenRefineColumn[season_date_start]"
+"OpenRefineColumn[season_date_end]"
+"OpenRefineTable[product_offering_Organic_clean]"
+"OpenRefineColumn[product_offering_Other]"
+"OpenRefineTable[payment_choice]"
+"OpenRefineColumn[street]"
+"OpenRefineColumn[state]"
+"OpenRefineColumn[city_clean]"
+"OpenRefineColumn[county_clean]"
+"OpenRefineColumn[zip_clean]"
+"OpenRefineColumn[x_clean]"
+"OpenRefineColumn[y_clean]"
+"OpenRefineColumn[locations]"
+"OpenRefineColumn[Market_Name_clean]"
+"OpenRefineColumn[website_clean]"
+"OpenRefineColumn[facebook_clean]"
+"OpenRefineColumn[twitter_clean]"
+"OpenRefineColumn[other_Media]"
+"OpenRefineColumn[Youtube]"
+"OpenRefineColumn[updatedate_clean]"
+"OpenRefineColumn[season_time_Monday]"
+"OpenRefineColumn[season_time_Tuesday]"
+"OpenRefineColumn[season_time_Wendesday]"
+"OpenRefineColumn[season_time_Thursday]"
+"OpenRefineColumn[season_time_Friday]"
+"OpenRefineColumn[season_time_Saturday]"
+"OpenRefineColumn[season_time_Sunday]"
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+Extract_Data_into_OpenRefine -> "OpenRefineTable[location]"
+Extract_Data_into_OpenRefine -> "OpenRefineTable[contact]"
+Extract_Data_into_OpenRefine -> "OpenRefineTable[operation_time]"
+Extract_Data_into_OpenRefine -> "OpenRefineTable[product_offering]"
+Extract_Data_into_OpenRefine -> "OpenRefineTable[payment_choice]"
+Farmers_Market_Data -> Extract_Data_into_OpenRefine
+Clean_location -> "OpenRefineColumn[street]"
+Clean_location -> "OpenRefineColumn[city]"
+Clean_location -> "OpenRefineColumn[county]"
+Clean_location -> "OpenRefineColumn[state]"
+Clean_location -> "OpenRefineColumn[zip]"
+Clean_location -> "OpenRefineColumn[x]"
+Clean_location -> "OpenRefineColumn[y]"
+Clean_location -> "OpenRefineColumn[locations]"
+"OpenRefineTable[location]" -> Clean_location
+Clean_city -> "OpenRefineColumn[city_clean]"
+"OpenRefineColumn[city]" -> Clean_city
+Clean_county -> "OpenRefineColumn[county_clean]"
+"OpenRefineColumn[county]" -> Clean_county
+Clean_zip -> "OpenRefineColumn[zip_clean]"
+"OpenRefineColumn[zip]" -> Clean_zip
+Clean_x -> "OpenRefineColumn[x_clean]"
+"OpenRefineColumn[x]" -> Clean_x
+Clean_y -> "OpenRefineColumn[y_clean]"
+"OpenRefineColumn[y]" -> Clean_y
+Clean_contact -> "OpenRefineColumn[Market_Name]"
+Clean_contact -> "OpenRefineColumn[Website]"
+Clean_contact -> "OpenRefineColumn[Facebook]"
+Clean_contact -> "OpenRefineColumn[Twitter]"
+Clean_contact -> "OpenRefineColumn[Youtube]"
+Clean_contact -> "OpenRefineColumn[other_Media]"
+"OpenRefineTable[contact]" -> Clean_contact
+Clean_Market_Name -> "OpenRefineColumn[Market_Name_clean]"
+"OpenRefineColumn[Market_Name]" -> Clean_Market_Name
+Clean_website -> "OpenRefineColumn[website_clean]"
+"OpenRefineColumn[Website]" -> Clean_website
+Clean_facebook -> "OpenRefineColumn[facebook_clean]"
+"OpenRefineColumn[Facebook]" -> Clean_facebook
+Clean_twitter -> "OpenRefineColumn[twitter_clean]"
+"OpenRefineColumn[Twitter]" -> Clean_twitter
+Clean_operation_time -> "OpenRefineColumn[season_date]"
+Clean_operation_time -> "OpenRefineColumn[season_time]"
+Clean_operation_time -> "OpenRefineColumn[Updatetime]"
+"OpenRefineTable[operation_time]" -> Clean_operation_time
+Clean_updatedate -> "OpenRefineColumn[updateyear]"
+Clean_updatedate -> "OpenRefineColumn[updatedate_clean]"
+"OpenRefineColumn[Updatetime]" -> Clean_updatedate
+Clean_season_date -> "OpenRefineColumn[season_date_start]"
+Clean_season_date -> "OpenRefineColumn[season_date_end]"
+"OpenRefineColumn[season_date]" -> Clean_season_date
+"OpenRefineColumn[updateyear]" -> Clean_season_date
+Clean_season_time -> "OpenRefineColumn[season_time_Monday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Tuesday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Wendesday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Thursday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Friday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Saturday]"
+Clean_season_time -> "OpenRefineColumn[season_time_Sunday]"
+"OpenRefineColumn[season_time]" -> Clean_season_time
+Clean_product_offering -> "OpenRefineTable[product_offering_Organic]"
+Clean_product_offering -> "OpenRefineColumn[product_offering_Other]"
+"OpenRefineTable[product_offering]" -> Clean_product_offering
+Clean_product_offering_Organic -> "OpenRefineTable[product_offering_Organic_clean]"
+"OpenRefineTable[product_offering_Organic]" -> Clean_product_offering_Organic
+integrity_constraints_date -> season_date_ic_checked
+"OpenRefineColumn[season_date_start]" -> integrity_constraints_date
+"OpenRefineColumn[season_date_end]" -> integrity_constraints_date
+integrity_constraints_year -> season_year_ic_checked
+"OpenRefineColumn[season_date_start]" -> integrity_constraints_year
+"OpenRefineColumn[season_date_end]" -> integrity_constraints_year
+"OpenRefineColumn[updateyear]" -> integrity_constraints_year
+integrity_constraints_product_buyable -> product_offering_ic_checked
+"OpenRefineTable[product_offering_Organic_clean]" -> integrity_constraints_product_buyable
+"OpenRefineColumn[product_offering_Other]" -> integrity_constraints_product_buyable
+integrity_constraints_payment_available -> payment_choice_ic_check
+"OpenRefineTable[payment_choice]" -> integrity_constraints_payment_available
+load_into_mysql -> Mysql_Table
+"OpenRefineTable[payment_choice]" -> load_into_mysql
+"OpenRefineColumn[street]" -> load_into_mysql
+"OpenRefineColumn[state]" -> load_into_mysql
+"OpenRefineColumn[city_clean]" -> load_into_mysql
+"OpenRefineColumn[county_clean]" -> load_into_mysql
+"OpenRefineColumn[zip_clean]" -> load_into_mysql
+"OpenRefineColumn[x_clean]" -> load_into_mysql
+"OpenRefineColumn[y_clean]" -> load_into_mysql
+"OpenRefineColumn[locations]" -> load_into_mysql
+"OpenRefineColumn[Market_Name_clean]" -> load_into_mysql
+"OpenRefineColumn[website_clean]" -> load_into_mysql
+"OpenRefineColumn[facebook_clean]" -> load_into_mysql
+"OpenRefineColumn[twitter_clean]" -> load_into_mysql
+"OpenRefineColumn[other_Media]" -> load_into_mysql
+"OpenRefineColumn[Youtube]" -> load_into_mysql
+"OpenRefineColumn[updatedate_clean]" -> load_into_mysql
+"OpenRefineColumn[season_date_start]" -> load_into_mysql
+"OpenRefineColumn[season_date_end]" -> load_into_mysql
+"OpenRefineColumn[season_time_Monday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Tuesday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Wendesday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Thursday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Friday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Saturday]" -> load_into_mysql
+"OpenRefineColumn[season_time_Sunday]" -> load_into_mysql
+"OpenRefineColumn[product_offering_Other]" -> load_into_mysql
+"OpenRefineTable[product_offering_Organic_clean]" -> load_into_mysql
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+Farmers_Market_Data_input_port [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+Mysql_Table_output_port [label=""]
+season_date_ic_checked_output_port [label=""]
+season_year_ic_checked_output_port [label=""]
+product_offering_ic_checked_output_port [label=""]
+payment_choice_ic_check_output_port [label=""]
+
+/* Edges from input ports to channels */
+Farmers_Market_Data_input_port -> Farmers_Market_Data
+
+/* Edges from channels to output ports */
+Mysql_Table -> Mysql_Table_output_port
+season_date_ic_checked -> season_date_ic_checked_output_port
+season_year_ic_checked -> season_year_ic_checked_output_port
+product_offering_ic_checked -> product_offering_ic_checked_output_port
+payment_choice_ic_check -> payment_choice_ic_check_output_port
+
+/* End of top-level graph */
+}
